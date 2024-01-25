@@ -1,7 +1,7 @@
 Config = {}
 
 Config.UseTarget = GetConvar('UseTarget', 'false') == 'true' -- Use qb-target interactions (don't change this, go to your server.cfg and add `setr UseTarget true` to use this and just that from true to false or the other way around)
-Config.PauseMapText = ''                                     -- Text shown above the map when ESC is pressed. If left empty 'FiveM' will appear
+Config.PauseMapText = 'MLGC'                                     -- Text shown above the map when ESC is pressed. If left empty 'FiveM' will appear
 Config.HarnessUses = 20
 Config.DamageNeeded = 100.0                                  -- amount of damage till you can push your vehicle. 0-1000
 
@@ -11,8 +11,8 @@ Config.AFK = {
         ['admin'] = true,
         ['god'] = true
     },
-    secondsUntilKick = 1000000, -- AFK Kick Time Limit (in seconds)
-    kickInCharMenu = false      -- Set to true if you want to kick players for being AFK even when they are in the character menu.
+    secondsUntilKick = 1800, -- AFK Kick Time Limit (in seconds)
+    kickInCharMenu = true      -- Set to true if you want to kick players for being AFK even when they are in the character menu.
 }
 
 Config.HandsUp = {
@@ -27,45 +27,45 @@ Config.Binoculars = {
 }
 
 Config.AIResponse = {
-    wantedLevels = false, -- if true, you will recieve wanted levels
+    wantedLevels = true, -- if true, you will recieve wanted levels
     dispatchServices = {  -- AI dispatch services
-        [1] = false,      -- Police Vehicles
-        [2] = false,      -- Police Helicopters
-        [3] = false,      -- Fire Department Vehicles
-        [4] = false,      -- Swat Vehicles
-        [5] = false,      -- Ambulance Vehicles
-        [6] = false,      -- Police Motorcycles
-        [7] = false,      -- Police Backup
-        [8] = false,      -- Police Roadblocks
-        [9] = false,      -- PoliceAutomobileWaitPulledOver
-        [10] = false,     -- PoliceAutomobileWaitCruising
-        [11] = false,     -- Gang Members
-        [12] = false,     -- Swat Helicopters
-        [13] = false,     -- Police Boats
-        [14] = false,     -- Army Vehicles
-        [15] = false      -- Biker Backup
+        [1] = true,      -- Police Vehicles
+        [2] = true,      -- Police Helicopters
+        [3] = true,      -- Fire Department Vehicles
+        [4] = true,      -- Swat Vehicles
+        [5] = true,      -- Ambulance Vehicles
+        [6] = true,      -- Police Motorcycles
+        [7] = true,      -- Police Backup
+        [8] = true,      -- Police Roadblocks
+        [9] = true,      -- PoliceAutomobileWaitPulledOver
+        [10] = true,     -- PoliceAutomobileWaitCruising
+        [11] = true,     -- Gang Members
+        [12] = true,     -- Swat Helicopters
+        [13] = true,     -- Police Boats
+        [14] = true,     -- Army Vehicles
+        [15] = true      -- Biker Backup
     }
 }
 
 -- To Set This Up visit https://forum.cfx.re/t/how-to-updated-discord-rich-presence-custom-image/157686
 Config.Discord = {
-    isEnabled = false,                                     -- If set to true, then discord rich presence will be enabled
-    applicationId = '00000000000000000',                   -- The discord application id
-    iconLarge = 'logo_name',                               -- The name of the large icon
-    iconLargeHoverText = 'This is a Large icon with text', -- The hover text of the large icon
-    iconSmall = 'small_logo_name',                         -- The name of the small icon
-    iconSmallHoverText = 'This is a Small icon with text', -- The hover text of the small icon
+    isEnabled = true,                                     -- If set to true, then discord rich presence will be enabled
+    applicationId = '1198522789838196817',                   -- The discord application id
+    iconLarge = 'my-logo',                               -- The name of the large icon
+    iconLargeHoverText = 'MLGC FiveM Roleplay Server ', -- The hover text of the large icon
+    iconSmall = 'my-logo',                         -- The name of the small icon
+    iconSmallHoverText = 'MLGC RP', -- The hover text of the small icon
     updateRate = 60000,                                    -- How often the player count should be updated
     showPlayerCount = true,                                -- If set to true the player count will be displayed in the rich presence
     maxPlayers = 48,                                       -- Maximum amount of players
     buttons = {
         {
-            text = 'First Button!',
-            url = 'fivem://connect/localhost:30120'
+            text = 'Get Whitelisted',
+            url = 'https://discord.gg/dMmUpNm6pm'
         },
         {
-            text = 'Second Button!',
-            url = 'fivem://connect/localhost:30120'
+            text = 'Follow Us',
+            url = 'https://www.facebook.com/gaming/mlgcprime'
         }
     }
 }
@@ -91,20 +91,20 @@ Config.Disable = {
 
 Config.Consumables = {
     eat = { -- default food items
-        ['sandwich'] = math.random(35, 54),
-        ['tosti'] = math.random(40, 50),
-        ['twerks_candy'] = math.random(35, 54),
-        ['snikkel_candy'] = math.random(40, 50)
+        --['sandwich'] = math.random(35, 54),
+        --['tosti'] = math.random(40, 50),
+        --['twerks_candy'] = math.random(35, 54),
+        --['snikkel_candy'] = math.random(40, 50)
     },
     drink = { -- default drink items
-        ['water_bottle'] = math.random(35, 54),
-        ['kurkakola'] = math.random(35, 54),
-        ['coffee'] = math.random(40, 50)
+        --['water_bottle'] = math.random(35, 54),
+        --['kurkakola'] = math.random(35, 54),
+        --['coffee'] = math.random(40, 50)
     },
     alcohol = { -- default alcohol items
-        ['whiskey'] = math.random(20, 30),
-        ['beer'] = math.random(30, 40),
-        ['vodka'] = math.random(20, 40),
+        --['whiskey'] = math.random(20, 30),
+        --['beer'] = math.random(30, 40),
+        --['vodka'] = math.random(20, 40),
     },
     custom = { -- put any custom items here
         -- ['newitem'] = {
