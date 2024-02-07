@@ -13,6 +13,7 @@ local function washLoop()
                 if IsControlPressed(0, 38) then
                     if dirtLevel > Config.CarWash.dirtLevel then
                         TriggerServerEvent('qb-carwash:server:washCar')
+                        TriggerEvent('wais:addmissionxp:washcar', 1) --added by pamela for wais battlepass
                     else
                         QBCore.Functions.Notify(Lang:t('wash.dirty'), 'error')
                     end
@@ -67,6 +68,7 @@ CreateThread(function()
                                 if driver == ped and not washingVeh then
                                     if dirtLevel > Config.CarWash.dirtLevel then
                                         TriggerServerEvent('qb-carwash:server:washCar')
+                                        TriggerEvent('wais:addmissionxp:washcar', 1) --added by pamela for wais battlepass
                                     else
                                         QBCore.Functions.Notify(Lang:t('wash.dirty'), 'error')
                                     end
